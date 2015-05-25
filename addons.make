@@ -1,4 +1,3 @@
-ofxOpenCv
 ofxBox2d
 ofxCv
 ofxFaceTracker
