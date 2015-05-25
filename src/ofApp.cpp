@@ -6,10 +6,12 @@ using namespace cv;
 void ofApp::setup() {
     debug = true;
     ofSetVerticalSync(true);
-    cam.initGrabber(640, 480);
+    //cam.initGrabber(640, 480);
+    cam.initGrabber(1200, 750);
     tracker.setup();
     tracker.setRescale(.5);
     microphone.setup(this);
+    generator.setup();
 }
 
 void ofApp::update() {
@@ -20,13 +22,17 @@ void ofApp::update() {
     leftEye = tracker.getImageFeature(ofxFaceTracker::LEFT_EYE).getCentroid2D();
     rightEye = tracker.getImageFeature(ofxFaceTracker::RIGHT_EYE).getCentroid2D();
     microphone.update();
+    generator.update(leftEye, rightEye);
+    generator.blow(microphone.scaledVol);
 }
 
 void ofApp::draw() {
     mouthImage = grabMouth();
+
     cam.draw(0, 0);
     drawMouth(leftEye, mouthImage);
     drawMouth(rightEye, mouthImage);
+    generator.draw();
     printDebug();
 }
 

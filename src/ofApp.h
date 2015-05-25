@@ -4,6 +4,7 @@
 
 #include "ofxFaceTracker.h"
 #include "microphone.h"
+#include "BallsGenerator.h"
 
 class ofApp : public ofBaseApp{
     
@@ -37,4 +38,5 @@ public:
     void audioIn(float * input, int bufferSize, int nChannels);
     ofSoundStream soundStream;
     Microphone microphone;
+    BallsGenerator generator;
 };

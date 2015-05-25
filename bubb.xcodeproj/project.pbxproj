@@ -47,7 +47,7 @@
 		6AABAB39E82AF5CFEA23A205 /* ContourFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB4A8427353AED09174BE5 /* ContourFinder.cpp */; };
 		6DEA36329DE746459C62983F /* b2EdgeShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2740F234BABAAF7475AC01AA /* b2EdgeShape.cpp */; };
 		6E23C8DD86B189759F85B24F /* FDet.cc in Sources */ = {isa = PBXBuildFile; fileRef = CF243F4577A116D71116C5C8 /* FDet.cc */; };
-		6F4167351B1075AA00D25742 /* ball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6F4167331B1075AA00D25742 /* ball.cpp */; };
+		6F45C5101B13298D007962A5 /* BallsGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6F45C50E1B13298D007962A5 /* BallsGenerator.cpp */; };
 		6F49680A1B11E4F4007C6C99 /* microphone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6F4968081B11E4F4007C6C99 /* microphone.cpp */; };
 		6FCE95D2EF10ACCEC2724688 /* b2Island.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C703FD5B2D1D10BAEE01BEA /* b2Island.cpp */; };
 		70ACBBD5DBE2725EC1E99CCF /* b2CircleContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A083AC6F4F462EBC57565 /* b2CircleContact.cpp */; };
@@ -237,8 +237,8 @@
 		6CEC50DB3D06414010233963 /* Utilities.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Utilities.cpp; path = ../../../addons/ofxCv/libs/ofxCv/src/Utilities.cpp; sourceTree = SOURCE_ROOT; };
 		6DD5A3CBB6D5BBA1C1354F1B /* flann.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = flann.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/flann.hpp; sourceTree = SOURCE_ROOT; };
 		6E3DCE6BBFE015A7257078C3 /* ofxBox2dConvexPoly.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBox2dConvexPoly.h; path = ../../../addons/ofxBox2d/src/ofxBox2dConvexPoly.h; sourceTree = SOURCE_ROOT; };
-		6F4167331B1075AA00D25742 /* ball.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ball.cpp; sourceTree = "<group>"; };
-		6F4167341B1075AA00D25742 /* ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ball.h; sourceTree = "<group>"; };
+		6F45C50E1B13298D007962A5 /* BallsGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BallsGenerator.cpp; sourceTree = "<group>"; };
+		6F45C50F1B13298D007962A5 /* BallsGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallsGenerator.h; sourceTree = "<group>"; };
 		6F4968081B11E4F4007C6C99 /* microphone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = microphone.cpp; sourceTree = "<group>"; };
 		6F4968091B11E4F4007C6C99 /* microphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = microphone.h; sourceTree = "<group>"; };
 		70046E043EDDB466ED625C3B /* Tracker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Tracker.h; path = ../../../addons/ofxCv/libs/ofxCv/include/ofxCv/Tracker.h; sourceTree = SOURCE_ROOT; };
@@ -1138,10 +1138,10 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
-				6F4167331B1075AA00D25742 /* ball.cpp */,
-				6F4167341B1075AA00D25742 /* ball.h */,
 				6F4968081B11E4F4007C6C99 /* microphone.cpp */,
 				6F4968091B11E4F4007C6C99 /* microphone.h */,
+				6F45C50E1B13298D007962A5 /* BallsGenerator.cpp */,
+				6F45C50F1B13298D007962A5 /* BallsGenerator.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -1392,12 +1392,12 @@
 				684CFB2E4AC045640B3A61F8 /* b2WheelJoint.cpp in Sources */,
 				370CDDF0DD53C5453DBD3F22 /* b2Rope.cpp in Sources */,
 				4CC0FD96DE77FF40BBCF8DD8 /* del_impl.cpp in Sources */,
-				6F4167351B1075AA00D25742 /* ball.cpp in Sources */,
 				B6840996567E78436F7ECFAB /* ETF.cpp in Sources */,
 				F76B4A79BD8DE4854141CB47 /* fdog.cpp in Sources */,
 				EBCDE831EFAE08274E799C97 /* Calibration.cpp in Sources */,
 				6AABAB39E82AF5CFEA23A205 /* ContourFinder.cpp in Sources */,
 				45CC483A999BF1065A6B926C /* Distance.cpp in Sources */,
+				6F45C5101B13298D007962A5 /* BallsGenerator.cpp in Sources */,
 				5CC34D433F5806179935B89D /* Flow.cpp in Sources */,
 				2023EF517ED2D8B397511D4B /* Helpers.cpp in Sources */,
 				311DF864378748129984EA1D /* Kalman.cpp in Sources */,

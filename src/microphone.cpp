@@ -5,7 +5,7 @@ Microphone::Microphone(){
     
 };
 
-void Microphone::setup(ofBaseApp *dass){
+void Microphone::setup(ofBaseApp *the_app){
     ofSetCircleResolution(80);
     ofBackground(54, 54, 54);
     soundStream.listDevices();
@@ -18,7 +18,7 @@ void Microphone::setup(ofBaseApp *dass){
     drawCounter		= 0;
     smoothedVol     = 0.0;
     scaledVol		= 0.0;
-    soundStream.setup(dass, 0, 2, 44100, bufferSize, 4);
+    soundStream.setup(the_app, 0, 2, 44100, bufferSize, 4);
 };
 
 void Microphone::update(){
