@@ -4,7 +4,7 @@ using namespace ofxCv;
 using namespace cv;
 
 void ofApp::setup() {
-    debug = true;
+    debug = false;
     ofSetVerticalSync(true);
     //cam.initGrabber(640, 480);
     cam.initGrabber(1200, 750);
@@ -33,13 +33,12 @@ void ofApp::draw() {
     drawMouth(leftEye, mouthImage);
     drawMouth(rightEye, mouthImage);
     generator.draw();
+    ofSetColor(225);
     printDebug();
 }
 
 void ofApp::drawMouth(ofVec2f eye, ofImage mouth){
-    //ofEnableAlphaBlending();
     mouth.draw(eye.x -mouth.width/2, eye.y - mouth.height/2);
-    //ofEnableAlphaBlending();
 }
 
 ofImage ofApp::grabMouth(){
